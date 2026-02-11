@@ -33,12 +33,19 @@ df['cumulative'] = df.apply(cumulative, axis=1)
 #print(df)
 
 #3.Use Pandas plotting to create a line plot of cumulative revenue vs. order_id.
+##the line plot is drawn with plt.plot(df['cumulative'], df['order_id'], ...), 
+# which plots the cumulative revenue on the x-axis and order_id on the y-axis. The assignment 
+# specifies a plot of cumulative revenue versus order_id, 
+# meaning order_id should be on the x-axis and cumulative revenue on the y-axis. 
+# Consider swapping the axes in your plot call so the chart reflects the intended relationship.
 
-plt.plot(df['cumulative'], df['order_id'], linestyle='--', color='red', linewidth=2)
 
-plt.title("Cumulative Revenue", fontsize=14, fontweight='bold')
-plt.xlabel(" Cumulative Revenue ($)", fontsize=12)
-plt.ylabel("Order_id", fontsize=12)
+
+plt.plot(df['order_id'], df['cumulative'], linestyle='--', color='red', linewidth=2)
+
+plt.title("Cumulative Revenue vs Order ID", fontsize=14, fontweight='bold')
+plt.xlabel("Order ID", fontsize=12)
+plt.ylabel("Cumulative Revenue ($)", fontsize=12)
 plt.grid(color='gray', linestyle='--', linewidth=0.5)
 plt.show()
 

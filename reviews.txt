@@ -1,0 +1,18 @@
+You successfully load the data and compute the cumulative revenue. Good job.
+One observation:
+However, the line plot is drawn with plt.plot(df['cumulative'], df['order_id'], ...), 
+which plots the cumulative revenue on the x-axis and order_id on the y-axis. The assignment 
+specifies a plot of cumulative revenue versus order_id, 
+meaning order_id should be on the x-axis and cumulative revenue on the y-axis. 
+Consider swapping the axes in your plot call so the chart reflects the intended relationship.
+
+@muralikrish
+muralikrish
+
+In data visualization convention, "Y versus X" means:
+
+Y is plotted on the vertical axis (y-axis)
+X is plotted on the horizontal axis (x-axis).
+
+Here is plot() syntax. first param is x-axis.
+plt.plot(x_data, y_data, 'r--o', label='Red Dashed with Circles')
